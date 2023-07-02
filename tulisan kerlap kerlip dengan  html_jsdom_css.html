@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animasi RGB</title>
+  <style>
+    #text {
+      font-size: 30px;
+      color: rgb(255, 0, 0);
+      transition: color 1s;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="text">Hello World</h1>
+
+  <script>
+// Ambil elemen dengan id "text"
+const textElement = document.getElementById("text");
+
+// Fungsi untuk mengubah warna secara acak
+function changeColor() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+
+  const rgbColor = `rgb(${red}, ${green}, ${blue})`;
+
+  // Ubah warna teks
+  textElement.style.color = rgbColor;
+}
+
+// Panggil fungsi changeColor() setiap 1 detik
+setInterval(changeColor, 1000);
+
+</script>
+</body>
+</html>
